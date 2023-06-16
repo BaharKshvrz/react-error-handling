@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Counter } from "./Counter";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorHandler from "./components/ErrorHandler";
+import {CounterWithErrorLib} from "./CounterWithErrorLib";
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -7,7 +9,12 @@ export default function App() {
 
   return (
       <div className="App">
-          <Counter inc={inc} count={count} />
+        <ErrorBoundary 
+             FallbackComponent={ErrorHandler}
+             onError={() => console.log("Error happend!")}
+             >
+            <CounterWithErrorLib inc={inc} count={count} />
+        </ErrorBoundary>
       </div>
   );
 }

@@ -13,7 +13,7 @@ export const Counter = ({inc, count}) => {
 
   return (
     <ErrorBoundary fallback={<p>Something went wrong</p>}>
-       <BadCode count={count}/>
+        <BadCode count={count}/>
         <div>Count: {count}</div>
         <button onClick={onClick}>+</button>
     </ErrorBoundary>
