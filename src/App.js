@@ -11,7 +11,7 @@ export default function App() {
       <div className="App">
         <ErrorBoundary 
              FallbackComponent={ErrorHandler}
-             onError={() => console.log("Error happend!")}
+             onError={() => console.log("Error happened!")}
              >
             <CounterWithErrorLib inc={inc} count={count} />
         </ErrorBoundary>

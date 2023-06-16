@@ -2,7 +2,7 @@ import { useErrorBoundary } from "react-error-boundary";
 
 const BadCode = ({count}) => {
     if (count === 2) {
-        throw Error('The Error has happend in React error lib!');
+        throw Error('The Error has happened in React error lib!');
     }
 }
 
@@ -11,7 +11,7 @@ export const CounterWithErrorLib = ({inc, count}) => {
 
   const onClick = () => {
     inc();
-    showBoundary(new Error("Special Error Happend!"));
+    showBoundary(new Error("Special Error happened!"));
   }
 
   return (
